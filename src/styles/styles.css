@@ -19,6 +19,10 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   color: #fafafa;
+  text-overflow: hidden;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #introduction {
@@ -56,8 +60,7 @@
   display: flex;
   flex-direction: row;
   padding: 4vw 0vw;
-  width: 20vw;
-  right: 3.6vw;
+  right: 5vw;
 }
 
 #boxContainer p {
@@ -78,17 +81,14 @@
 }
 
 #box1 {
-  position: relative;
-  left: 2vw;
+  left: 1.8vw;
 }
 
 #box2 {
-  position: relative;
   left: 7.5vw;
 }
 
 #box3 {
-  position: relative;
   left: 11vw;
 }
 
@@ -263,4 +263,42 @@ a:active {
   color: yellow;
   background-color: transparent;
   text-decoration: underline;
+}
+
+@media (max-width: 760px) { 
+  #introduction {
+    top: 7vw;
+    right: 20vw;
+  }
+}
+
+@media (max-width: 1200px) { 
+  #msc {
+    font-size: 10px;
+  }
+  #boxContainer p {
+    font-size: 12px;
+  }
+  #textContainer p {
+    font-size: 12px;
+  }
+  button {
+    font-size: 12px;
+  }
+  h {
+    font-size: 18px;
+  }
+  #footer p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) { 
+  .hvr-shrink.cards {
+    width: 50vw;
+    height: 30vw;
+  }
+  #cardContainer {
+    margin-top: 20vw;
+  }
 }

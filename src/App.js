@@ -247,7 +247,7 @@ export default class Home extends React.Component {
             This was a project we did during the Interactivity in smart
             enviroments course and the Project Management course. The aim of the
             Hikikomori project was to help young people who are outside society
-            to develop and improve their social therapy
+            to develop and improve their social life.
           </p>
           <br />
           <p>
