@@ -1,130 +1,129 @@
-import React from 'react'
-import { Carousel } from 'react-responsive-carousel'
-import './styles/styles.css'
-import './styles/carousel.css'
-import './styles/hover-min.css'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "./styles/styles.css";
+import "./styles/carousel.css";
+import "./styles/hover-min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default class Home extends React.Component {
-
   state = {
     showMore: false,
     cardID: [],
     cards: [
       {
-        id: 'badrums',
-        src: 'badrums.png',
+        id: "badrums",
+        src: "badrums.png"
       },
       {
-        id: 'tremory',
-        src: 'tremory.png',
+        id: "tremory",
+        src: "tremory.png"
       },
       {
-        id: 'cinnober',
-        src: 'cinnober.png',
+        id: "cinnober",
+        src: "cinnober.png"
       },
       {
-        id: 'phocus',
-        src: 'phocus.png',
+        id: "phocus",
+        src: "phocus.png"
       },
       {
-        id: 'fresh',
-        src: 'fresh.png',
+        id: "fresh",
+        src: "fresh.png"
       },
       {
-        id: 'hikikomori',
-        src: 'hikikomori.png',
-      },
+        id: "hikikomori",
+        src: "hikikomori.png"
+      }
     ],
     badrums: [
-      { src: require('./assets/images/badrumsboden/1.png') },
-      { src: require('./assets/images/badrumsboden/2.png') },
-      { src: require('./assets/images/badrumsboden/3.png') },
+      { src: require("./assets/images/badrumsboden/1.png") },
+      { src: require("./assets/images/badrumsboden/2.png") },
+      { src: require("./assets/images/badrumsboden/3.png") }
     ],
     tremory: [
-      { src: require('./assets/images/tremory/1.png') },
-      { src: require('./assets/images/tremory/2.png') },
-      { src: require('./assets/images/tremory/3.png') },
-      { src: require('./assets/images/tremory/4.png') },
-      { src: require('./assets/images/tremory/5.png') },
+      { src: require("./assets/images/tremory/1.png") },
+      { src: require("./assets/images/tremory/2.png") },
+      { src: require("./assets/images/tremory/3.png") },
+      { src: require("./assets/images/tremory/4.png") },
+      { src: require("./assets/images/tremory/5.png") }
     ],
     fresh: [
-      { src: require('./assets/images/fresh/1.png') },
-      { src: require('./assets/images/fresh/2.png') },
+      { src: require("./assets/images/fresh/1.png") },
+      { src: require("./assets/images/fresh/2.png") }
     ],
     hikikomori: [
-      { src: require('./assets/images/hikikomori/1.png') },
-      { src: require('./assets/images/hikikomori/2.png') },
-      { src: require('./assets/images/hikikomori/3.png') },
-      { src: require('./assets/images/hikikomori/4.png') },
-      { src: require('./assets/images/hikikomori/5.png') },
+      { src: require("./assets/images/hikikomori/1.png") },
+      { src: require("./assets/images/hikikomori/2.png") },
+      { src: require("./assets/images/hikikomori/3.png") },
+      { src: require("./assets/images/hikikomori/4.png") },
+      { src: require("./assets/images/hikikomori/5.png") }
     ],
-    phocus: [{ src: require('./assets/images/phocus/1.jpg') }],
-  }
+    phocus: [{ src: require("./assets/images/phocus/1.jpg") }]
+  };
 
   showMore = id => {
     this.setState(prevState => {
-      return { cardID: id, showMore: !prevState.showMore }
-    })
-  }
+      return { cardID: id, showMore: !prevState.showMore };
+    });
+  };
 
   showLess = () => {
     this.setState(prevState => {
-      return { showMore: !prevState.showMore }
-    })
-  }
+      return { showMore: !prevState.showMore };
+    });
+  };
 
   renderCards = () => {
-    const { cards } = this.state
+    const { cards } = this.state;
 
     let cardsToRender = cards.map(item => {
-      const { id, src } = item
+      const { id, src } = item;
 
       return (
         <div
           className="hvr-shrink cards"
-          id={id + 'i'}
+          id={id + "i"}
           onClick={() => this.showMore(id)}
         >
           <img
             id={id}
             className="icons"
-            src={require('./assets/' + src)}
+            src={require("./assets/" + src)}
             alt="img"
           />
         </div>
-      )
-    })
+      );
+    });
 
-    return cardsToRender
-  }
+    return cardsToRender;
+  };
 
   renderSliderImgs = () => {
-    const { badrums, phocus, tremory, hikikomori, cardID } = this.state
+    const { badrums, phocus, tremory, hikikomori, cardID } = this.state;
 
-    let imgs = []
-    if (cardID === 'badrums') {
-      imgs = badrums
-    } else if (cardID === 'hikikomori') {
-      imgs = hikikomori
-    } else if (cardID === 'tremory') {
-      imgs = tremory
-    } else if (cardID === 'phocus') {
-      imgs = phocus
+    let imgs = [];
+    if (cardID === "badrums") {
+      imgs = badrums;
+    } else if (cardID === "hikikomori") {
+      imgs = hikikomori;
+    } else if (cardID === "tremory") {
+      imgs = tremory;
+    } else if (cardID === "phocus") {
+      imgs = phocus;
     }
 
     let ImgsToRender = imgs.map((item, i) => {
-      return <img className="images" id={i} src={item.src} alt="img" />
-    })
+      return <img className="images" id={i} src={item.src} alt="img" />;
+    });
 
-    return ImgsToRender
-  }
+    return ImgsToRender;
+  };
 
   getText = () => {
-    const { cardID } = this.state
+    const { cardID } = this.state;
 
-    if (cardID === 'badrums') {
+    if (cardID === "badrums") {
       return (
         <div>
           <h>Badrumsboden</h>
@@ -147,8 +146,8 @@ export default class Home extends React.Component {
             Link to the application
           </a>
         </div>
-      )
-    } else if (cardID === 'tremory') {
+      );
+    } else if (cardID === "tremory") {
       return (
         <div>
           <h>Tremory</h>
@@ -182,8 +181,8 @@ export default class Home extends React.Component {
           </p>
           <br />
         </div>
-      )
-    } else if (cardID === 'cinnober') {
+      );
+    } else if (cardID === "cinnober") {
       return (
         <div>
           <h>Cinnober</h>
@@ -194,8 +193,8 @@ export default class Home extends React.Component {
             where I learned scrum for the first time.
           </p>
         </div>
-      )
-    } else if (cardID === 'phocus') {
+      );
+    } else if (cardID === "phocus") {
       return (
         <div>
           <h>Phocus</h>
@@ -213,8 +212,8 @@ export default class Home extends React.Component {
             Link to full image
           </a>
         </div>
-      )
-    } else if (cardID === 'fresh') {
+      );
+    } else if (cardID === "fresh") {
       return (
         <div>
           <h>Freshcoast</h>
@@ -238,8 +237,8 @@ export default class Home extends React.Component {
             Link to the app store
           </a>
         </div>
-      )
-    } else if (cardID === 'hikikomori') {
+      );
+    } else if (cardID === "hikikomori") {
       return (
         <div>
           <h>Hikikomori</h>
@@ -255,12 +254,12 @@ export default class Home extends React.Component {
             for some one else to implement.
           </p>
         </div>
-      )
+      );
     }
-  }
+  };
 
   render() {
-    const { showMore } = this.state
+    const { showMore } = this.state;
 
     return (
       <div id="container">
@@ -268,7 +267,7 @@ export default class Home extends React.Component {
           <p id="hello">HELLO</p>
           <div id="introduction">
             <p id="iam">I'm alfred ödling</p>
-            {<img id="line" src={require('./assets/line.png')} alt="img" />}
+            {<img id="line" src={require("./assets/line.png")} alt="img" />}
             <p id="msc">MS.C INTERACTION & DESIGN STUDENT</p>
             <div id="boxContainer">
               <div id="box1" className="box">
@@ -306,8 +305,13 @@ export default class Home extends React.Component {
 
         <div id="footer">
           <p>Contact me: alfred.odling@hotmail.se</p>
+          <img
+            id="qr"
+            src={require("./assets/qr.png")}
+            alt="img"
+          />
         </div>
       </div>
-    )
+    );
   }
 }
