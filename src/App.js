@@ -176,12 +176,6 @@ export default class Home extends React.Component {
             outdated.
           </p>
           <br />
-          <br />
-          <p>
-            Below are a couple of mixed images of the mockup and the actual
-            application.
-          </p>
-          <br />
         </div>
       );
     } else if (cardID === "cinnober") {
