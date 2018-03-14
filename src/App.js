@@ -46,7 +46,9 @@ export default class Home extends React.Component {
       { src: require("./assets/images/tremory/2.png") },
       { src: require("./assets/images/tremory/3.png") },
       { src: require("./assets/images/tremory/4.png") },
-      { src: require("./assets/images/tremory/5.png") }
+      { src: require("./assets/images/tremory/5.png") },
+      { src: require("./assets/images/tremory/6.png") },
+      { src: require("./assets/images/tremory/7.png") }
     ],
     fresh: [
       { src: require("./assets/images/fresh/1.png") },
