@@ -2,16 +2,11 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://AlfredOdling.github.io/Portfolio",
+  "homepage": "http://AlfredOdling.github.io/react-boilerplate-2-simple",
   "dependencies": {
-    "hover.css": "^2.2.1",
-    "lazygit": "^1.0.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-responsive-carousel": "^3.1.33",
-    "react-scripts": "1.1.1",
-    "react-slick": "^0.18.0",
-    "slick-carousel": "^1.8.1"
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-scripts": "^1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,7 +18,7 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.2.0"
   },
   "prettier": {
     "eslint.enable": true,

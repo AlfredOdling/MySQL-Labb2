@@ -1,25 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,800");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
-@import '../css/carousel.css';
-@import '../css/hover-min.css';
 * {
   margin: 0;
   padding: 0;
-}
-
-a {
-  font-family: "Montserrat", sans-serif;
-  background-color: #1787fb;
-  color: white;
-  padding: 3px 6px 3px 6px;
-}
-
-h {
-  font-family: "Montserrat", sans-serif;
-}
-
-p {
-  font-family: "Open Sans", sans-serif;
 }
 
 /*# sourceMappingURL=base.css.map */
