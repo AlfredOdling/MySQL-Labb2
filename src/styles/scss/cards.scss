@@ -1,0 +1,59 @@
+@import 'base.scss';
+
+#cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 14vw;
+  margin: 5vw;
+}
+
+.hvr-shrink.cards {
+  @extend %box-shadow;
+  width: 30vw;
+  height: 20vw;
+  margin-left: 1.2vw;
+  margin-right: 1.2vw;
+  margin-bottom: 2.4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+
+  &:active {
+    transform: scale(0.8, 0.8);
+  }
+}
+
+.icons {
+  object-fit: contain;
+}
+
+#badrumsboden {
+  width: 65%;
+  height: 65%;
+}
+
+#tremory {
+  width: 40%;
+  height: 40%;
+}
+
+#cinnober {
+  width: 52%;
+  height: 52%;
+}
+
+#phocus {
+  width: 63%;
+  height: 63%;
+}
+
+#freshcoast {
+  width: 45%;
+  height: 45%;
+}
+
+#hikikomori {
+  width: 65%;
+  height: 65%;
+}

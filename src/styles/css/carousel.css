@@ -131,7 +131,7 @@
 .carousel .slider-wrapper {
   overflow: hidden;
   margin: auto;
-  width: 100%;
+  width: 60%;
   max-height: 30vw;
   -webkit-transition: height 0.15s ease-in;
   -moz-transition: height 0.15s ease-in;

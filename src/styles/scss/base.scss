@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,800');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import '../css/carousel.css';
+@import '../css/hover-min.css';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$font-family: 'Montserrat', sans-serif;
+$font-family2: 'Open Sans', sans-serif;
+
+$light-black: rgb(49, 49, 49);
+$light-black: rgb(49, 49, 49);
+$nice-blue: rgb(23, 135, 251);
+$nice-blue-dark: rgb(0, 88, 181);
+
+%flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+%box-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a {
+  font-family: $font-family;
+  background-color: $nice-blue;
+  color: white;
+  padding: 3px 6px 3px 6px;
+}
+
+h {
+  font-family: $font-family;
+}
+
+p {
+  font-family: $font-family2;
+}

@@ -1,0 +1,55 @@
+@import 'base.scss';
+
+@media (max-width: 1200px) {
+  #msc {
+    font-size: 10px;
+  }
+  #boxContainer p {
+    font-size: 12px;
+  }
+  .textContainer p {
+    font-size: 12px;
+  }
+  button {
+    font-size: 12px;
+  }
+  h {
+    font-size: 18px;
+  }
+  #footer p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+   #intro {
+    //  top: 7vw;
+    //  right: 21vw;
+   }
+ }
+ 
+ @media (max-width: 500px) {
+
+  #intro {
+    right: 17vw;
+  }
+
+  #iam {
+    font-size: 8vw;
+  }
+
+  #line {
+    padding: 2vw 0vw;
+  }
+
+  #cardContainer {
+    // margin-top: 25vw;
+    margin-top: 20vw;
+  }
+
+   .hvr-shrink.cards {
+     width: 50vw;
+     height: 30vw;
+   }
+ }
+ 
